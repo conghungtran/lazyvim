@@ -3,14 +3,15 @@
 -- Add any additional options here
 vim.g.snacks_animate = false
 -- Tự động format khi save
-vim.api.nvim_create_autocmd("BufWritePre", {
-  pattern = { "*.c", "*.h", "*.cpp", "*.hpp" },
-  callback = function()
-    vim.cmd(":!clang-format -i %")
-  end,
-})
+-- vim.api.nvim_create_autocmd("BufWritePre", {
+--   pattern = { "*.c", "*.h", "*.cpp", "*.hpp" },
+--   callback = function()
+--     vim.cmd(":!clang-format -i %")
+--   end,
+-- })
 
 -- vim.diagnostic.enable(false, {
 --   virtual_text = false,
 --   signs = false,
 -- })
+--
