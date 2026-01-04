@@ -6,3 +6,9 @@ local keymap = vim.keymap.set
 
 keymap("n", '<leader>s"', 'ysiw"', { desc = "Surround word with quotes" })
 keymap("n", "<leader>s'", "ysiw'", { desc = "Surround word with single quotes" })
+
+keymap("n", "<leader>cf", function()
+  vim.cmd("silent !clang-format -i %")
+  vim.cmd("edit!")
+  vim.cmd("redraw!")
+end, { desc = "Format file with clang-format" })
